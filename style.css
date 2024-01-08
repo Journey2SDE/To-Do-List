@@ -1,0 +1,39 @@
+
+        body{
+            background-color: aquamarine;
+            width: 90%;
+            height: 90vh;
+        }
+
+        .to-do-list{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #text{
+            height: 30px;
+            width: 200px;
+        }
+        .adding{
+            margin-left: 5px;
+            width: 50px;
+        }
+
+        h1{
+            text-align: center;
+        }
+       
+        .deleting{
+            text-align: center;
+            width: 60px;
+            margin-right: 5px;
+            padding: 1px 1px;
+        }
+
+        .editing{
+            text-align: center;
+            width: 50px;
+            padding: 1px 1px;
+        }
+   

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"><h1>To Do List</h1>
+      <div class="to-do-list">
+        <input type="text" name="" id="text" placeholder="add your list">
+        <button class="adding" onclick="addingText()">Add</button><br>
+
+      </div>
+    </div>
+</body>
+<script>
+     
+    function addingText(){
+        let text = document.getElementById("text");
+        let outcome = document.createElement("p");
+        const deleteBtn = document.createElement("button");
+        const editBtn = document.createElement("button");
+        outcome.innerText =text.value;
+        text.value = ""
+        document.body.appendChild(outcome);
+        deleteBtn.innerHTML ="Delete";
+        deleteBtn.classList.add("deleting");
+        document.body.appendChild(deleteBtn);
+
+
+        editBtn.innerHTML = "Edit";
+        editBtn.classList.add("editing");
+        document.body.appendChild(editBtn);
+
+        editBtn.addEventListener("click", function(){
+            let editedVal = window.prompt("Edit your value");
+            if(editedVal !== null){
+                outcome.innerText = editedVal;
+            }
+        })
+
+        deleteBtn.addEventListener("click", function() {
+            outcome.innerText = "";
+            deleteBtn.style.display = "none";
+            editBtn.style.display = "none";
+        })
+        
+    }
+
+</script>
+</html>
